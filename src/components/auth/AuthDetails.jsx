@@ -2,6 +2,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState} from "react";
 import { auth } from "../../firebase";
 import Home from "../Home";
+import Reservas from "../Reservas";
 
 /*
 Acá arriba va codigo de javascript de lo que quieras o necesites para que funcione la pagina
@@ -22,7 +23,7 @@ No cambia mucho de una planilla de excel
 un ejemplo, dependiendo de como lo hagas puede quedar algo que nada que ver con esto
 
 await setDoc(nombreDoc(nombreDb, "canchas", "cancha1"), {
-  nombre: "user.getName()",
+  nombre: "authUser.email",
   horario: horario (no se como lo sacas del calendario ese que importaste),
   alquilaPaletas: true
 });
@@ -83,9 +84,8 @@ const AuthDetails = () => {
         <>
           <p>{`Sesión iniciada como ${authUser.email}`}</p>
           <button onClick={userSignOut}>Cerrar Sesión</button>
-          <br />
           <p>Resto de la pag que ya armaste, entra acá como un componente</p>
-          <p> lo llamas con el tag de html directamente ej. "<homeScreen />" </p>
+          <Reservas />
         </>
       ) : (
         <Home />
