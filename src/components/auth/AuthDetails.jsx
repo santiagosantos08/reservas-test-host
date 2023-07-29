@@ -12,11 +12,12 @@ ej: acá hay una funcion para cerrar sesion y otra que te indica si estas loguea
 armar la parte de reservar las canchas, etc vas a tener que pasar la logica de compararlo en la sesion a algo que lo compare en la db
 
 en la pag de firebase tenes que activar las funcionalidades que quieras y vas importando lo que necesites, ej acá solo importo el modulo de auth
-despues tienen otro de realtime, alguno general, etc, dependiendo cual uses es como le guardas info, eso vas a tener que ver la documentacion del que sea que elijas (o si usas supra lo mismo)
+la base de datos "default" es la firestore.
+despues tienen otro de realtime, etc, dependiendo cual uses es como le guardas info, eso vas a tener que ver la documentacion del que sea que elijas (o si usas supra lo mismo)
 
 supongo que con la firestore db alcanza para esto ya que no hay mucho trafico pero en cualquier caso tienen tambien la 'realtime database' (supongo será mas enrosque y/o de pago)
 
-la firestore la usé una vez y trabaja con documentos, depende de como la quieras estructurar vas a tener las reservas asignadas al usuario o a la cancha
+trabaja con documentos, depende de como la quieras estructurar vas a tener las reservas asignadas al usuario o a la cancha
 
 No cambia mucho de una planilla de excel
 
@@ -30,7 +31,7 @@ await setDoc(nombreDoc(nombreDb, "canchas", "cancha1"), {
 
 https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es-419
 
-abajo en el return es donde escribis el html de toda la vida, lo que tiene de bueno (pero puede ser confuso) React es que te deja mezclarlo bastante, podes meter htmk en js que este dentro de html y así
+abajo en el return es donde escribis el html de toda la vida, lo que tiene de bueno (pero puede ser confuso) React es que te deja mezclarlo bastante
 
 la mayoria de los return estan escritos como
 
