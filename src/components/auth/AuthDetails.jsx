@@ -1,8 +1,6 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState} from "react";
 import { auth } from "../../firebase";
-import SignUp from "./SignUp";
-import SignIn from "./SignIn";
 import Home from "../Home";
 
 /*
@@ -55,7 +53,6 @@ return op2; -> por defecto
 
 const AuthDetails = () => {
   const [authUser, setAuthUser] = useState(null);
-  const [showComponent, setShowComponent] = useState(false);
 
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
